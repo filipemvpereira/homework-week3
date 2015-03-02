@@ -36,3 +36,9 @@ If you get a `command not found: bundle`, run `gem install bundler` first
 # Running RSpec
 
 Run `rspec bowling_spec.rb`
+
+If you get a `rspec: command not found`, try this instead:
+
+```
+bundle exec rspec bowling_spec.rb
+```
