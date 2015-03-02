@@ -2,6 +2,7 @@
 
 1. Fork this repository
 2. Clone it to your computer
+3. Do the exercise in `bowling.rb` and `bowling_spec.rb`
 3. Do each of the exercises in the exercise directories
 4. Push your solutions to your GitHub repository
 5. When you feel confident with your solution, open a pull request to
