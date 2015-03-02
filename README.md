@@ -1,4 +1,4 @@
-# Homework - Week 2
+# Homework - Week 3
 
 1. Fork this repository
 2. Clone it to your computer
