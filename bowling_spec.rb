@@ -30,6 +30,13 @@ RSpec.describe Bowling do
     	expect(@game.jogadas.size).to eq 10
     end	
 
+    it 'Fazer no máximo 12 rolls, ou seja, fazer strike no 10' do
+    	for current_iteration_number in 1..19 do  
+            @game.roll(3)   
+    	end
+    	expect(@game.roll(10)).to eq 1 
+    end
+
   end
 
 
@@ -51,13 +58,19 @@ RSpec.describe Bowling do
     	expect(@game.score).to eq 36
     end
 
+    it 'numero de rolls com 12 Strikes' do
+    	for current_iteration_number in 1..12 do
+    		@game.roll(10)
+    	end
+    	expect(@game.jogadas.size).to eq 12
+    end		
+
     it '10 Strikes' do
     	for current_iteration_number in 1..12 do
     		@game.roll(10)
     	end
-    	expect(@game.jogadas.size).to eq 11
-    end		
-
+    	expect(@game.score).to eq 240
+    end
   
   end
 end

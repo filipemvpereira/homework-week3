@@ -60,18 +60,19 @@
 	    		  	@attempts=1
 	    		  	@index += 1
 	    		  		
-	    		end				
-	    	elsif  @index<=11 && @jogadas.at(@index).spare == 1
+	    		end
+
+	    	elsif  @index==11 && @jogadas.at(10).spare == 1
 	    		jogada = Jogada.new()
 	    		jogada.insert(pins,@attempts)
 	    		@jogadas.insert(11,jogada)
 
-	    	elsif @index<=11 && @jogadas.at(10).strike == 1 && @attempts == 1
+	    	elsif @index==11 && @jogadas.at(10).strike == 1 && @attempts == 1
 	    		jogada = Jogada.new()
 	    		jogada.insert(pins,@attempts)
 	    		@jogadas.insert(11,jogada)
 	    		@attempts = 2
-	    	elsif @index<=11 && @jogadas.at(10).strike == 1	&& @attempts == 2
+	    	elsif @index==11 && @jogadas.at(10).strike == 1	&& @attempts == 2
 	    		@jogadas.at(@index).second_game = pins
 	    	else check = 0
 	    	end	
